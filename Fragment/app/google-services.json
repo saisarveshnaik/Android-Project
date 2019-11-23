@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "784686099865",
+    "firebase_url": "https://contactmanager-929e9.firebaseio.com",
+    "project_id": "contactmanager-929e9",
+    "storage_bucket": "contactmanager-929e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784686099865:android:b4ff8a83cca02cb1a57708",
+        "android_client_info": {
+          "package_name": "com.example.application.fragment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784686099865-fq9h6hq19bglrp22cf7atf07adjfph4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.application.fragment",
+            "certificate_hash": "0d74ef03eac4c036baab68abc77d7c62726333d2"
+          }
+        },
+        {
+          "client_id": "784686099865-2umno652vlq0veam58v5s4lu6lb6f6hc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.application.fragment",
+            "certificate_hash": "ffde03ba9c9256635c663e0ee1f08b25ee360372"
+          }
+        },
+        {
+          "client_id": "784686099865-9pu6s6obm4qrpj1hfn9jnj1dgsaocstt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLxd7HmW4UYhhMolcaTbtW3Lww1HFp1ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784686099865-9pu6s6obm4qrpj1hfn9jnj1dgsaocstt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784686099865:android:f35355f2203ecad6a57708",
+        "android_client_info": {
+          "package_name": "com.example.contactmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784686099865-rqk1kf2n5m2btp22v1kta8v9a45epv8s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.contactmanager",
+            "certificate_hash": "ffde03ba9c9256635c663e0ee1f08b25ee360372"
+          }
+        },
+        {
+          "client_id": "784686099865-5llsrpr94rniethgult4ettiq7gcdi74.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.contactmanager",
+            "certificate_hash": "a8c8eea935e7df3c095a851a8127a62f0a6b01e9"
+          }
+        },
+        {
+          "client_id": "784686099865-9pu6s6obm4qrpj1hfn9jnj1dgsaocstt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLxd7HmW4UYhhMolcaTbtW3Lww1HFp1ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784686099865-9pu6s6obm4qrpj1hfn9jnj1dgsaocstt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

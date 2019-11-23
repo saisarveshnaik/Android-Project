@@ -1,80 +1,71 @@
-package com.example.contactmanager;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.application.fragment.ui.home;
 
 import android.content.ContentResolver;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CursorAdapter;
 import android.widget.TextView;
+import android.content.Context;
 
-public class MainActivity extends AppCompatActivity
-{
+import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
-    Button click;
-    Button click2;
-    Button click3;
+import com.example.application.fragment.R;
+
+public class HomeFragment extends Fragment {
+
+    private HomeViewModel homeViewModel;
+
     private Button loadcontacts;
     private TextView listContacts;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        listContacts =root.findViewById(R.id.listContacts);
+        loadcontacts =root.findViewById(R.id.loadcontacts);
+
+        loadcontacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadcontact();
+            }
+        });
+
+       // final TextView textView = root.findViewById(R.id.text_home);
+       // homeViewModel.getText().observe(this, new Observer<String>() {
+         //   @Override
+           // public void onChanged(@Nullable String s) {
+               // textView.setText(s);
+          //  }
+       // });
+
+
+
+        return root;
+    }
+
+    public void loadcontact()
+
+
     {
 
-        
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        listContacts = (TextView) findViewById(R.id.listContacts);
-        loadcontacts = (Button) findViewById(R.id.loadcontacts);
-        loadcontacts.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                loadcontact();
 
 
-            }
-        });
-        click=(Button)findViewById(R.id.createcontacts);            //TO CREATE CONTACT IN LISTVIEW
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,Main2Activity.class);
-                startActivity(i);
-            }
-        });
 
-
-        click2=(Button)findViewById(R.id.CallLogs);                  //TO DISPLAY CALL LOGS
-        click2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,Main3Activity.class);
-                startActivity(i);
-            }
-        });
-
-
-        click3=(Button)findViewById(R.id.createVCF);
-        click3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,Main4Activity.class);
-                startActivity(i);
-            }
-        });
-
-    }
-        public void loadcontact()
-        {
         StringBuilder builder = new StringBuilder();
-        ContentResolver contentResolver = getContentResolver();
+        ContentResolver contentResolver = getActivity().getContentResolver();
         Cursor cursor = contentResolver.query(ContactsContract.Contacts.CONTENT_URI,null,null,null,null);
 
         if (cursor.getCount() > 0)
@@ -105,5 +96,15 @@ public class MainActivity extends AppCompatActivity
         }
         cursor.close();
         listContacts.setText(builder.toString());
+
+
+
+
+
+
+
+
+
+
     }
 }

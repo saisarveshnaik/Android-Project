@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fragment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Contact Manager</string>
+    <string name="nav_header_subtitle">saisarvesh.naik007@gmail.com</string>
+    <string name="nav_header_subtitle2">omkargad007@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Display Contacts</string>
+    <string name="menu_gallery">Create Contact</string>
+    <string name="menu_slideshow">Call Log</string>
+    <string name="menu_tools">Create VCF</string>
+    <string name="menu_share">Firebase</string>
+    <string name="menu_send">Download</string>
+</resources>
